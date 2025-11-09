@@ -1,0 +1,3 @@
+ledo,a,Experto,5000,3
+j,k,Novato,5000,3
+g,h,VIP,5000,3

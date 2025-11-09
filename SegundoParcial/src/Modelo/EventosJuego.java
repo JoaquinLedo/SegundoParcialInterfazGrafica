@@ -8,6 +8,7 @@ package Modelo;
  *
  * @author Joaquin
  */
-public class EventosJuego {
-    
+public interface EventosJuego {
+    void onEvento(String texto);
+    void onActualizacion();
 }

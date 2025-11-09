@@ -8,6 +8,14 @@ package Modelo;
  *
  * @author Joaquin
  */
+import java.util.ArrayList;
+import java.util.List;
+
 public class Partida {
-    
+    private final int numero;
+    private final List<ResultadoRonda> rondas = new ArrayList<>();
+    public Partida(int n) { this.numero = n; }
+    public int getNumero() { return numero; }
+    public List<ResultadoRonda> getRondas() { return rondas; }
+    public void agregarResultado(ResultadoRonda r) { rondas.add(r); }
 }

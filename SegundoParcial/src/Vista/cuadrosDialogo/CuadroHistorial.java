@@ -8,6 +8,28 @@ package Vista.cuadrosDialogo;
  *
  * @author Joaquin
  */
-public class CuadroHistorial {
-    
+import javax.swing.*;
+import java.awt.*;
+import java.util.List;
+
+public class CuadroHistorial extends JDialog {
+    public CuadroHistorial(Frame owner, List<String> ultimas, List<String> guardado) {
+        super(owner, "Historial de Partidas", true);
+        setSize(520, 380);
+        setLocationRelativeTo(owner);
+        JTextArea ta = new JTextArea(); ta.setEditable(false);
+
+        if (ultimas != null && !ultimas.isEmpty()) {
+            ta.append("ÚLTIMAS PARTIDAS\n");
+            for (String s : ultimas) ta.append("• " + s + "\n");
+            ta.append("\n");
+        }
+        if (guardado != null && !guardado.isEmpty()) {
+            ta.append("HISTORIAL GUARDADO\n");
+            for (String s : guardado) ta.append("• " + s + "\n");
+        }
+        if (ta.getText().isBlank()) ta.setText("Sin historial.");
+
+        add(new JScrollPane(ta));
+    }
 }

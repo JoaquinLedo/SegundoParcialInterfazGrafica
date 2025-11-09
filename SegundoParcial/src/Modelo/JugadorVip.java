@@ -8,6 +8,9 @@ package Modelo;
  *
  * @author Joaquin
  */
-public class JugadorVip {
-    
+public class JugadorVip extends Jugador {
+    public JugadorVip(String nombre, String apodo, int dineroInicial) {
+        super(nombre, apodo, dineroInicial);
+    }
+    @Override public String getTipo() { return "VIP"; }
 }

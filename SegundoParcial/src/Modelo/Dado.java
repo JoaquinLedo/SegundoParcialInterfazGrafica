@@ -8,6 +8,13 @@ package Modelo;
  *
  * @author Joaquin
  */
+
+import java.util.Random;
+
 public class Dado {
-    
+    private final Random rnd = new Random();
+
+    public int tirar() {
+        return 1 + rnd.nextInt(6); // 1..6
+    }
 }

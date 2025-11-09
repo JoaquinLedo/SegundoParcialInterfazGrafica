@@ -8,6 +8,7 @@ package Modelo;
  *
  * @author Joaquin
  */
-public class Trampa {
-    
+
+public enum Trampa {
+    CARGADOS, CONFUSION, NINGUNA
 }

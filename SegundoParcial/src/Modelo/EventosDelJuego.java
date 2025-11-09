@@ -8,6 +8,12 @@ package Modelo;
  *
  * @author Joaquin
  */
+import java.util.ArrayList;
+import java.util.List;
+
 public class EventosDelJuego {
-    
+    private final List<String> log = new ArrayList<>();
+    public void agregar(String e) { log.add(e); }
+    public List<String> getLog() { return new ArrayList<>(log); }
+    public void clear() { log.clear(); }
 }

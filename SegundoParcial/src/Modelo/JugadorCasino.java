@@ -8,6 +8,7 @@ package Modelo;
  *
  * @author Joaquin
  */
-public class JugadorCasino {
-    
+public class JugadorCasino extends Jugador {
+    public JugadorCasino() { super("Casino", "Casa", Integer.MAX_VALUE / 4); }
+    @Override public String getTipo() { return "Casino"; }
 }
