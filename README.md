@@ -1,4 +1,4 @@
-Trabajo práctico de **Interfaz Gráfica – 2° Instancia Evaluativa**  
+Trabajo Práctico de **Interfaz Gráfica – 2° Instancia Evaluativa**  
 Alumno: **Joaquín Ledo**
 
 ---
@@ -87,17 +87,12 @@ El sistema impide iniciar si faltan datos requeridos.
 
 Transparencia en el uso de IA y documentación
 
-<img width="415" height="507" alt="image" src="https://github.com/user-attachments/assets/a7b287de-35db-40cb-8dd2-be9e6658042a" />
+<img width="435" height="435" alt="image" src="https://github.com/user-attachments/assets/8c0916df-ec4e-4e22-8c84-a0823ee9b982" />
 
 Pront Utilizado:
 
 "Quiero que seas un programador experto en java y quiero que me ayudes a resolver las consignas de la segunda insatnacia evaluativa que te paso tene en cuenta que todo se usa como base el parcial previamente echo que te pase, yo ya cree el nuevo proyecto y esta es la estructura ayudame con el codigo para que ande no me des las respuestas para que copie sino que giame de como hacerlas, tene en cuenta que la profe me dijo que copie toda la logica del proyecto pasado en este."
 
-
-Cumplir con los requisitos de persistencia y reportes solicitados por la consigna.
-
-Resolver los conflictos surgidos durante el desarrollo de manera documentada y transparente.
-
-El resultado es una aplicación completa, modular y mantenible que amplía el proyecto original del Casino de Dados y cumple con todos los objetivos de la 2° instancia evaluativa.
+Tambien le adjunte las consignas del segundo parcial y el proyecto del primer parcial, este chat es el mismo que use para el primer parcial, por lo que ya tenia los apuntes cargados.
 
 ---
