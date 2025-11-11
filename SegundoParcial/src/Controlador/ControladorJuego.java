@@ -12,7 +12,6 @@ import Modelo.*;
 import Vista.VentanaJuego;
 import Vista.VentanaReporteFinal;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -20,7 +19,7 @@ import java.util.List;
 public class ControladorJuego implements EventosJuego {
     private final EstadoDelJuego estado;
     private final ControladorPersistencia persistencia;
-    private VentanaJuego vista;
+    private Vista.VentanaJuego vista;
 
     public ControladorJuego(EstadoDelJuego estado, ControladorPersistencia persistencia) {
         this.estado = estado;
@@ -41,8 +40,9 @@ public class ControladorJuego implements EventosJuego {
     }
 
     private void finalizar() {
-        persistencia.guardarTodo(estado);
-        new VentanaReporteFinal(rankingActual(), estadisticas(), ultimas3()).setVisible(true);
+        persistencia.guardarTodo(estado);         
+        new VentanaReporteFinal(rankingActual(),  
+                estadisticas(), ultimas3()).setVisible(true);
         vista.dispose();
     }
 
@@ -60,7 +60,7 @@ public class ControladorJuego implements EventosJuego {
 
         for (Jugador j : estado.getJugadores()) {
             if (j.getUltimaApuesta() >= mayorApuesta) { mayorApuesta = j.getUltimaApuesta(); jApuesta = j; }
-            if (j.getUltimoTiro() >= mejorTiro) { mejorTiro = j.getUltimoTiro(); jTiro = j; }
+            if (j.getUltimoTiro()   >= mejorTiro)     { mejorTiro   = j.getUltimoTiro();     jTiro = j; }
         }
         for (String e : estado.getEventos().getLog())
             if (e.contains("confunde")) jugadoresAfectados++;
@@ -85,7 +85,7 @@ public class ControladorJuego implements EventosJuego {
         return hist;
     }
 
-    @Override public void onEvento(String texto) { /* hook opcional */ }
+    @Override public void onEvento(String texto) {}
     @Override public void onActualizacion() { if (vista != null) vista.refrescar(); }
 
     public List<String> historialGuardado() { return persistencia.cargarHistorialSeguro(); }

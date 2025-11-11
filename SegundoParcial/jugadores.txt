@@ -1,3 +1,2 @@
-ledo,a,Experto,5000,3
-j,k,Novato,5000,3
-g,h,VIP,5000,3
+joa,a,Experto,950,6
+d,d,Experto,950,6

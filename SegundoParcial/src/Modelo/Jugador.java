@@ -8,7 +8,12 @@ package Modelo;
  *
  * @author Joaquin
  */
+import java.io.Serializable;
+
 public abstract class Jugador implements Comparable<Jugador> {
+    
+  private static final long serialVersionUID = 1L;
+
     protected String nombre;
     protected String apodo;
     protected int dinero;
@@ -33,7 +38,7 @@ public abstract class Jugador implements Comparable<Jugador> {
     }
 
     public int tirar(Dado dado) {
-        int t = dado.tirar() + dado.tirar(); // 2..12
+        int t = dado.tirar() + dado.tirar(); 
         if (trampa == Trampa.CARGADOS) t = Math.max(2, t - 2);
         else if (trampa == Trampa.CONFUSION) t = Math.max(2, t - 1);
         ultimoTiro = t;

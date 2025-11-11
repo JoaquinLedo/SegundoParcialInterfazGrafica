@@ -8,21 +8,22 @@ package Modelo;
  *
  * @author Joaquin
  */
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.Serializable;
 import java.util.*;
 
-public class EstadoDelJuego {
+public class EstadoDelJuego implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private final List<Jugador> jugadores = new ArrayList<>();
     private final List<Partida> partidas = new ArrayList<>();
-    private int partidasTotales = 3;
-    private int rondasPorPartida = 3;
-    private int dineroInicial = 500;
-    private int apuestaFija = 100;
-    private int idxPartida = 0;
-    private int idxRonda = 0;
+    private int partidasTotales = 3, rondasPorPartida = 3, dineroInicial = 500, apuestaFija = 100;
+    private int idxPartida = 0, idxRonda = 0;
 
     private final Dado dado = new Dado();
     private final EventosDelJuego eventos = new EventosDelJuego();
-    private final Random rnd = new Random();
+    private transient Random rnd = new Random(); // ¡transient!
 
     public void configurar(int dineroInicial, int partidasTotales, int rondasPorPartida, int apuestaFija) {
         this.dineroInicial = dineroInicial;
@@ -57,7 +58,7 @@ public class EstadoDelJuego {
     public ResultadoRonda jugarRonda() {
         if (finalizado()) return null;
 
-        // Trampa aleatoria del "casino"
+       
         if (rnd.nextInt(100) < 20) {
             Jugador victima = jugadores.get(rnd.nextInt(jugadores.size()));
             Trampa t = rnd.nextBoolean() ? Trampa.CONFUSION : Trampa.CARGADOS;
@@ -88,7 +89,7 @@ public class EstadoDelJuego {
         return pozo;
     }
 
-    // Getters públicos
+  
     public List<Jugador> getJugadores() { return jugadores; }
     public List<Partida> getPartidas()  { return partidas; }
     public int getPartidasTotales()     { return partidasTotales; }
@@ -96,4 +97,9 @@ public class EstadoDelJuego {
     public int getIndicePartida()       { return idxPartida; }
     public int getIndiceRonda()         { return idxRonda; }
     public EventosDelJuego getEventos() { return eventos; }
+    
+    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
+        in.defaultReadObject();
+        rnd = new Random(); 
+    }
 }

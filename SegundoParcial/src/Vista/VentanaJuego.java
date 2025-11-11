@@ -18,7 +18,6 @@ import Vista.cuadrosDialogo.CuadroRanking;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.List;
 
 public class VentanaJuego extends JFrame {
     private final ControladorJuego controlador;
@@ -43,34 +42,40 @@ public class VentanaJuego extends JFrame {
     }
 
     private void armarUI() {
-        // Menú
+        
         JMenuBar mb = new JMenuBar();
+
         JMenu mPartida = new JMenu("Partida");
-        JMenuItem miSalir = new JMenuItem("Salir");
+        JMenuItem miSalir   = new JMenuItem("Salir");
         mPartida.add(miSalir);
 
         JMenu mVer = new JMenu("Ver");
         JMenuItem miRanking = new JMenuItem("Ranking actual");
         JMenuItem miHist = new JMenuItem("Historial");
         JMenuItem miStats = new JMenuItem("Estadísticas");
-        mVer.add(miRanking); mVer.add(miHist); mVer.add(miStats);
+        mVer.add(miRanking);
+        mVer.add(miHist);
+        mVer.add(miStats);
 
-        mb.add(mPartida); mb.add(mVer);
+        mb.add(mPartida);
+        mb.add(mVer);
         setJMenuBar(mb);
 
-        // Header
+   
         JPanel sup = new JPanel(new GridLayout(1,3));
-        sup.add(lblPartida); sup.add(lblRonda); sup.add(lblPozo);
+        sup.add(lblPartida);
+        sup.add(lblRonda);
+        sup.add(lblPozo);
         sup.setBorder(BorderFactory.createTitledBorder("Información de partida"));
 
-        // Centro
+       
         for (int i=0;i<4;i++) contJugadores.add(new PanelJugador());
         JPanel centro = new JPanel(new BorderLayout());
         centro.add(contJugadores, BorderLayout.CENTER);
         JButton btnRonda = new JButton("Jugar Ronda");
         centro.add(btnRonda, BorderLayout.SOUTH);
 
-        // Log
+     
         lstLog.setVisibleRowCount(6);
         JPanel inf = new JPanel(new BorderLayout());
         inf.setBorder(BorderFactory.createTitledBorder("Log de eventos"));
@@ -81,12 +86,15 @@ public class VentanaJuego extends JFrame {
         add(centro, BorderLayout.CENTER);
         add(inf, BorderLayout.SOUTH);
 
-        // acciones
+       
         btnRonda.addActionListener(e -> controlador.jugarRonda());
         miSalir.addActionListener(e -> System.exit(0));
-        miRanking.addActionListener(e -> new CuadroRanking(this, controlador.rankingActual()).setVisible(true));
-        miHist.addActionListener(e -> new CuadroHistorial(this, controlador.ultimas3(), controlador.historialGuardado()).setVisible(true));
-        miStats.addActionListener(e -> new CuadroEstadisticas(this, controlador.estadisticas()).setVisible(true));
+        miRanking.addActionListener(e ->
+                new CuadroRanking(this, controlador.rankingActual()).setVisible(true));
+        miHist.addActionListener(e ->
+                new CuadroHistorial(this, controlador.ultimas3(), controlador.historialGuardado()).setVisible(true));
+        miStats.addActionListener(e ->
+                new CuadroEstadisticas(this, controlador.estadisticas()).setVisible(true));
 
         refrescar();
     }

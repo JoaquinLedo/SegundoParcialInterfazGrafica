@@ -68,9 +68,9 @@ public class VentanaConfiguracion extends JFrame {
         lista.add(new JScrollPane(lst));
 
         JPanel abajo = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        JButton btnHist    = new JButton("Historial");
         JButton btnIniciar = new JButton("Iniciar juego");
-        JButton btnHist = new JButton("Cargar historial");
-        JButton btnSalir = new JButton("Salir");
+        JButton btnSalir   = new JButton("Salir");
         abajo.add(btnHist); abajo.add(btnIniciar); abajo.add(btnSalir);
 
         JPanel centro = new JPanel(new GridLayout(1,3,10,10));
@@ -78,9 +78,9 @@ public class VentanaConfiguracion extends JFrame {
 
         setLayout(new BorderLayout(10,10));
         add(centro, BorderLayout.CENTER);
-        add(abajo, BorderLayout.SOUTH);
+        add(abajo,  BorderLayout.SOUTH);
 
-        // acciones
+      
         btnAgregar.addActionListener(e -> {
             controlador.configurar((int)spDinero.getValue(), (int)spPartida.getValue(),
                     (int)spRondas.getValue(), (int)spApuesta.getValue());
@@ -119,7 +119,7 @@ public class VentanaConfiguracion extends JFrame {
         }
     }
 
-    // Punto de entrada
+    
     public static void main(String[] args) {
         javax.swing.SwingUtilities.invokeLater(() -> new Controlador.ControladorConfiguracion().iniciar());
     }

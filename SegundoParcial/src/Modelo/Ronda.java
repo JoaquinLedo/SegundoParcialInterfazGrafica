@@ -8,11 +8,13 @@ package Modelo;
  *
  * @author Joaquin
  */
+import java.io.Serializable;
 import java.util.List;
 
-public class Ronda {
+public class Ronda implements Serializable {
+    private static final long serialVersionUID = 1L;
     private final int numero;
-    public Ronda(int numero) { this.numero = numero; }
+    public Ronda(int n){ this.numero = n; }
     public int getNumero() { return numero; }
 
     public ResultadoRonda jugar(List<Jugador> jugadores, Dado dado, int apuestaFija) {

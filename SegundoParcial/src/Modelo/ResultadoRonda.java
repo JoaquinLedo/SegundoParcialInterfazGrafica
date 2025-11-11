@@ -8,14 +8,17 @@ package Modelo;
  *
  * @author Joaquin
  */
+
+import java.io.Serializable;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class ResultadoRonda {
+public class ResultadoRonda implements Serializable {
+    private static final long serialVersionUID = 1L;
     private final Map<Jugador,Integer> tiros = new LinkedHashMap<>();
     private Jugador ganador;
     private int pozo;
-
+    
     public void registrarTiro(Jugador j, int valor) { tiros.put(j, valor); }
     public Map<Jugador,Integer> getTiros() { return tiros; }
     public Jugador getGanador() { return ganador; }

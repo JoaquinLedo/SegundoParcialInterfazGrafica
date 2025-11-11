@@ -35,8 +35,8 @@ public class ControladorConfiguracion {
         Jugador j;
         switch (tipo) {
             case "Experto": j = new JugadorExperto(nombre, apodo, dineroInicial); break;
-            case "VIP": j = new JugadorVip(nombre, apodo, dineroInicial); break;
-            default: j = new JugadorNovato(nombre, apodo, dineroInicial);
+            case "VIP":     j = new JugadorVip(nombre, apodo, dineroInicial);     break;
+            default:        j = new JugadorNovato(nombre, apodo, dineroInicial);
         }
         estado.agregarJugador(j);
         vista.refrescarLista();
@@ -63,5 +63,7 @@ public class ControladorConfiguracion {
         new ControladorJuego(estado, persistencia).abrir();
     }
 
-    public java.util.List<String> historialGuardado() { return persistencia.cargarHistorialSeguro(); }
+    public java.util.List<String> historialGuardado() {
+        return persistencia.cargarHistorialSeguro();
+    }
 }
