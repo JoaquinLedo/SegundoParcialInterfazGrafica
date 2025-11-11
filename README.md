@@ -1,15 +1,21 @@
-Parte Practica de Instancia Evaluativa 2 de Interfaz Grafica
-Alumno: Joaquín Ledo
+Trabajo práctico de **Interfaz Gráfica – 2° Instancia Evaluativa**  
+Alumno: **Joaquín Ledo**
 
+---
 
-Objetivo del proyecto
+## Objetivo del proyecto
 
 El objetivo fue ampliar y mejorar el juego original del Desafío 3, desarrollado en consola, para transformarlo en una aplicación gráfica con Swing, aplicando el patrón MVC (Modelo – Vista – Controlador) y agregando persistencia de datos.
 
-Video explicativo del funcionamiento del sistema y de la interfaz gráfica:
+---
+
+Video explicando como funciona, lo subi a youtube para que se mas facil verlo le dejo el link:
+
 https://youtu.be/MJ5SEgNi5BU?si=T7J7r7vDqRqbjZeh
 
-Esta segunda instancia evaluativa se centró en:
+---
+
+##Esta segunda instancia evaluativa se centró en:
 
 Implementar una interfaz gráfica completa, con menús, formularios y reportes.
 
@@ -19,8 +25,9 @@ Incorporar un sistema de persistencia en archivos de texto para jugadores e hist
 
 Mostrar estadísticas, ranking e historial desde la interfaz, sin usar consola.
 
+---
 
-Nuevas funcionalidades implementadas
+##Nuevas funcionalidades implementadas
 1. Interfaz gráfica con Swing
 
 Se reemplazó la consola por una interfaz construida con JFrame, JPanel, JMenuBar, JList y JButton.
@@ -76,8 +83,7 @@ No se permite agregar jugadores con nombre o apodo vacío.
 
 El sistema impide iniciar si faltan datos requeridos.
 
-Estructura del proyecto
-
+---
 
 Transparencia en el uso de IA y documentación
 
@@ -93,3 +99,5 @@ Cumplir con los requisitos de persistencia y reportes solicitados por la consign
 Resolver los conflictos surgidos durante el desarrollo de manera documentada y transparente.
 
 El resultado es una aplicación completa, modular y mantenible que amplía el proyecto original del Casino de Dados y cumple con todos los objetivos de la 2° instancia evaluativa.
+
+---
