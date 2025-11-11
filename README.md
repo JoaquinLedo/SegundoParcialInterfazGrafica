@@ -6,6 +6,9 @@ Objetivo del proyecto
 
 El objetivo fue ampliar y mejorar el juego original del Desafío 3, desarrollado en consola, para transformarlo en una aplicación gráfica con Swing, aplicando el patrón MVC (Modelo – Vista – Controlador) y agregando persistencia de datos.
 
+Video explicativo del funcionamiento del sistema y de la interfaz gráfica:
+https://youtu.be/MJ5SEgNi5BU?si=T7J7r7vDqRqbjZeh
+
 Esta segunda instancia evaluativa se centró en:
 
 Implementar una interfaz gráfica completa, con menús, formularios y reportes.
@@ -74,56 +77,16 @@ No se permite agregar jugadores con nombre o apodo vacío.
 El sistema impide iniciar si faltan datos requeridos.
 
 Estructura del proyecto
-src/
- ├─ Modelo/
- │   ├─ Jugador.java
- │   ├─ JugadorNovato.java
- │   ├─ JugadorExperto.java
- │   ├─ JugadorVip.java
- │   ├─ Dado.java
- │   ├─ Ronda.java
- │   ├─ Partida.java
- │   ├─ EstadoDelJuego.java
- │   ├─ ResultadoRonda.java
- │   ├─ EventosDelJuego.java
- │   └─ ServicioDePersistencia.java
- │
- ├─ Controlador/
- │   ├─ ControladorConfiguracion.java
- │   ├─ ControladorJuego.java
- │   └─ ControladorPersistencia.java
- │
- └─ Vista/
-     ├─ VentanaConfiguracion.java
-     ├─ VentanaJuego.java
-     ├─ VentanaReporteFinal.java
-     └─ componentes/
-         ├─ PanelJugador.java
-         └─ PanelRegistro.java
+
 
 Transparencia en el uso de IA y documentación
+
 <img width="415" height="507" alt="image" src="https://github.com/user-attachments/assets/a7b287de-35db-40cb-8dd2-be9e6658042a" />
 
 Pront Utilizado:
 
-Quiero que seas un programador experto en java y quiero que me ayudes a resolver las consignas de la segunda insatnacia evaluativa que te paso tene en cuenta que todo se usa como base el parcial previamente echo que te pase, yo ya cree el nuevo proyecto y esta es la estructura ayudame con el codigo para que ande no me des las respuestas para que copie sino que giame de como hacerlas, tene en cuenta que la profe me dijo que copie toda la logica del proyecto pasado en este
+"Quiero que seas un programador experto en java y quiero que me ayudes a resolver las consignas de la segunda insatnacia evaluativa que te paso tene en cuenta que todo se usa como base el parcial previamente echo que te pase, yo ya cree el nuevo proyecto y esta es la estructura ayudame con el codigo para que ande no me des las respuestas para que copie sino que giame de como hacerlas, tene en cuenta que la profe me dijo que copie toda la logica del proyecto pasado en este."
 
-Durante el desarrollo se utilizó ChatGPT como herramienta de apoyo técnico para:
-
-Estructurar el proyecto bajo el patrón MVC.
-
-Resolver conflictos de persistencia y refresco visual.
-
-Reorganizar los controladores y validar la comunicación entre vistas.
-
-También se consultó documentación oficial de Oracle Java y ejemplos de Swing de GeeksForGeeks.
-
-Video demostrativo
-
-Video explicativo del funcionamiento del sistema y de la interfaz gráfica:
-https://youtu.be/MJ5SEgNi5BU?si=T7J7r7vDqRqbjZeh
-
-Mantener el patrón MVC de forma correcta.
 
 Cumplir con los requisitos de persistencia y reportes solicitados por la consigna.
 
